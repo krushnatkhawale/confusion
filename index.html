@@ -86,7 +86,9 @@
                     <img src="img/logo.png" class="img-fluid" />
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a type="button" class="btn btn-sm btn-warning col-12" href="#tableReserveForm">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -143,7 +145,7 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center" id="tableReserveForm">
+        <div class="row row-content align-items-center" id="reserveform">
             <div class="container col-11 col-sm-8">
                 <div class="card">
                     <div class="card-header bg-warning text-white">
@@ -248,7 +250,12 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
